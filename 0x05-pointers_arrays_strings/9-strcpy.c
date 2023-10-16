@@ -4,21 +4,15 @@
  * char *_strcpy - a func that copies the string pointed to by src
  * @dest: copy to
  * @src: copy from
- * Return: string
+ * Return: dest
  */
+
 char *_strcpy(char *dest, char *src)
 {
-	int l = 0;
-	int x = 0;
+	int i;
 
-	while (*(src + l) != '\0')
-	{
-		l++
-	}
-	for (; x < l ; x++)
-	{
-		dest[x] = src[x];
-	}
-	des[l] = '\0';
+	for (i = 0 ; src[i] != '\0' ; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
 	return (dest);
 }
