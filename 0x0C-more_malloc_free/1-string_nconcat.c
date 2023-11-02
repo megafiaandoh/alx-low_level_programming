@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -11,7 +12,7 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int a;
+	unsigned int i;
 	unsigned int s1len = 0;
 	unsigned int s2len = 0;
 	char *output;
@@ -20,9 +21,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (a = 0; s1[a] != '\0'; a++)
+	for (i = 0; s1[i] != '\0'; i++)
 		s1len++;
-	for (a = 0; s2[a] != '\0'; a++)
+	for (i = 0; s2[i] != '\0'; i++)
 		s2len++;
 
 	output = malloc(sizeof(char) * (s1len + n) + 1);
@@ -30,18 +31,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	if (n >= s2len)
 	{
-		for (a = 0; s1[a] != '\0'; a++)
-			output[a] = s1[a];
-		for (a = 0; s2[a] != '\0'; a++)
-			output[s1len + a] = s2[a];
-		output[s1len + a] = '\0';
+		for (i = 0; s1[i] != '\0'; i++)
+			output[i] = s1[i];
+		for (i = 0; s2[i] != '\0'; i++)
+			output[s1len + i] = s2[i];
+		output[s1len + i] = '\0';
 	}
 	else
 	{
-		for (a = 0; s1[a] != '\0'; a++)
-			output[a] = s1[a];
-		for (a = 0; a < n; a++)
-			output[s1len + a] = s2[a];
+		for (i = 0; s1[i] != '\0'; i++)
+			output[i] = s1[i];
+		for (i = 0; i < n; i++)
+			output[s1len + i] = s2[i];
+		output[s1len + i] = '\0';
 	}
 	return (output);
 }
