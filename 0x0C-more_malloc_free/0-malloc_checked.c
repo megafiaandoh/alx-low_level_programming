@@ -5,7 +5,7 @@
 /**
  * malloc_checked - funtion that allocates memory using malloc
  * @b: size of memory
- * Return: void
+ * Return: pointer to the new memory allocated
  */
 
 void *malloc_checked(unsigned int b)
