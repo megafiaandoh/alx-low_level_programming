@@ -4,7 +4,7 @@
 #include "3-calc.h"
 
 /**
- * main - prints teh result of simple operations
+ * main - prints the result of simple operations
  * @argc: numbr of arguments to the program
  * @argv: array of pointers to the arguments
  *
